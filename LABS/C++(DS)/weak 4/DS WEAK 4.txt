@@ -1,0 +1,94 @@
+weak_4
+
+program a
+
+#include <iostream>
+
+using namespace std;
+
+int factorial(int n);
+
+
+ int main()
+{
+	int n;
+	
+	cout<<"enter a positive integer";
+	cin>>n;
+	
+	cout<<" factorial of "<< n << "="<< factorial(n);
+	 
+	 return 0;
+	 
+	
+}
+int factorial (int n){
+	if ( n>1)
+	return n * factorial(n-1);
+}
+
+
+
+program b
+
+
+#include <iostream>
+using namespace std;
+
+int gcd ( int a, int b){
+	if(b==0)
+	return a;
+	return gcd(b,a % b);
+}
+
+int main(){
+	int a,b;
+	cout<<"enter the values of a and b";
+	cin>>a>>b;
+	cout<<"GCD of" << a <<"and" << b <<"is"<< gcd(a,b);
+	return 0;
+}
+
+
+
+program c
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n,first=0,second=1,next;
+	
+	cout<<"Enter the number of terms for fibonacci series\n";
+	cin>>n;
+	cout<<"Fibonacci series\n";
+	for(int i=0;i<n;i++)
+	{
+		cout<<first;
+		next=first+second;
+		first=second;
+		second=next;
+	}
+}
+
+
+
+program d
+
+
+#include<iostream>
+using namespace std;
+void TowerOfHanoi(int num,char A,char B,char C){
+	if(num>0){
+		TowerOfHanoi(num-1,A,C,B);
+		cout<<"Move disk"<<num<<"from"<<""<<A<<"to"<<C<<"\n";
+		TowerOfHanoi(num-1,B,A,C);
+	}
+}
+int main(){
+	int n;
+	cout<<"Enter the number of disks";
+	cin>>n;
+	TowerOfHanoi(n,'A','B','C');
+	cout<<"";
+}

@@ -1,0 +1,98 @@
+program 1
+
+
+import java.util.Scanner;
+
+public class Sum {
+    public static void main(String[] args ){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter total number of elements");
+        int n=sc.nextInt();
+        float ar[]=new float[n];
+        System.out.println("Enter the array elements");
+        float sum=0;
+        for (int i=0;i<n;i++) {
+            ar[i]=sc.nextFloat();
+            sum=sum+ar[i];
+        }
+        System.out.println("The sum of elements in the array is : "+sum);
+    }
+
+}
+
+ program 2
+
+
+import java.util.Scanner;
+public class EvenorOdd {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter size of the array: ");
+		int n=sc.nextInt();
+		int[] arr= new int[n];
+		System.out.println("Enter the elements: ");
+		for (int i=0;i<n;i++) {
+			arr[i]=sc.nextInt();
+		}
+		sc.close();
+		int even=0;
+		if (n%2==0) even=1;
+		int sum=0;
+		if (even==1) {
+			sum=arr[0]+arr[n-1];
+			System.out.println("Size is even and the sum is "+sum);
+		}
+		else {
+			sum=arr[0]+arr[n-1]+arr[(n-1)/2];
+			System.out.println("Size is odd and the sum is "+sum);
+
+		}
+	}
+}
+
+
+program 3
+
+
+import java.util.Scanner;
+public class matrixmultiplication {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int[][] m1,m2;
+		m1= new int[2][2];
+		m2= new int[2][2];
+		System.out.println("Enter the elements for 1st matrix: ");
+		for (int i=0;i<2;i++) {
+			for (int j=0;j<2;j++) {
+				m1[i][j]=sc.nextInt();
+			}
+		}
+		System.out.println("Enter the elements for 2nd matrix: ");
+		for (int i=0;i<2;i++) {
+			for (int j=0;j<2;j++) {
+				m2[i][j]=sc.nextInt();
+			}
+		}
+		sc.close();
+		//Matrix Multiplication
+		int m3[][];
+		m3=new int[2][2];
+		for (int i=0;i<2;i++) {
+			for (int j=0;j<2;j++) {
+				m3[i][j]=0;
+				for (int k=0;k<2;k++) {
+					m3[i][j]+=m1[i][k]*m2[k][j];
+				}
+			}
+		}
+		System.out.println("The result is:");
+		for (int i=0;i<2;i++) {
+			for (int j=0;j<2;j++) {
+				System.out.print(m3[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}

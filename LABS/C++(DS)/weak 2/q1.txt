@@ -1,0 +1,324 @@
+prog1 a
+#include<iostream>
+using namespace std;
+int main()
+{
+	int m,i,j,k=0,ut[30][30],u1d[30];
+	cout<<"Enter the number of rows and columns:";
+	cin>>m;
+	cout<<"\nEnter the values of the upper triangular matrix:\n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			if(i>j)
+			{
+				ut[i][j]=0;
+			}
+			else
+			{
+				cin>>ut[i][j];
+			}
+		}
+	}
+    cout<<"\nThe upper triangular matrix is :\n\n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			cout<<ut[i][j];
+			cout<<"\t";	
+		}
+		cout<<"\n";
+	}
+	cout<<"\nMapping to 1d array \n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++) 
+		{
+			if(i<=j)
+			{
+				u1d[k]=ut[i][j];
+				k++;
+			}
+		}
+	}
+	for(i=0;i<k;i++)
+	{
+		cout<<u1d[i];
+		cout<<"  ";
+	}
+	cout<<"\nEnter the position i & j for retreival \n\n";
+	cin>>i;
+	cin>>j;
+	cout<<u1d[(m*i)+j-(i*(i+1)/2)];
+}
+----------------------------------------------------------------
+prog1 b
+#include<iostream>
+using namespace std;
+int main()
+{
+	int m,i,j,lt[30][30],l1d[30],k=0;
+	cout<<"Enter the number of rows and columns:";
+	cin>>m;
+	cout<<"\nEnter the values of the lower triangular matrix:\n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			if(i<j)
+			{
+				lt[i][j]=0;
+			}
+			else
+			{
+				cin>>lt[i][j];
+			}
+		}
+	}
+	cout<<"The lower triangular matrix is :\n\n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			cout<<lt[i][j];
+			cout<<"\t";	
+		}
+		cout<<"\n";
+	}
+	cout<<"\nMapping to 1d array \n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			if(i>=j)
+			{
+				l1d[k]=lt[i][j];
+				k++;
+			}
+		}
+	}
+	for(i=0;i<k;i++)
+	{
+		cout<<l1d[i];
+		cout<<"  ";
+	}
+	cout<<"\nEnter the position for retreival\n\n";
+	cin>>i;
+	cin>>j;
+	cout<<l1d[i*(i+1)/2+j];
+	
+}
+	
+-----------------------------------------------------------------------
+prog1 c
+#include<iostream>
+using namespace std;
+int main()
+{
+	int m,i,j,d[30][30],d1d[30],k=0;
+	cout<<"Enter the number of rows and columns:";
+	cin>>m;
+	cout<<"\nEnter the values of diagonal matrix :";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			if(i==j)
+			{
+			cin>>d[i][j];
+			}
+			else
+			{
+				d[i][j]=0;
+			}
+		}
+	}
+	cout<<"The diagonal matrix is :\n\n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			cout<<d[i][j];
+			cout<<"\t";
+		}
+		cout<<"\n";
+	}
+	cout<<"\nMapping to 1d array \n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			if(i==j)
+			{
+				d1d[k]=d[i][j];
+				k++;
+			}
+		}
+	}
+		for(i=0;i<k;i++)
+		{
+		cout<<d1d[i];
+		cout<<"  ";
+		}
+	cout<<"\nEnter the position for retreival\n\n";
+	cin>>i;
+	cin>>j;
+	cout<<d1d[(i+j)/2];
+	
+}
+-------------------------------------------------------------------------------
+prog1 d
+#include<iostream>
+using namespace std;
+int main()
+{
+	int m,i,j,td[30][30],td1d[30],k=0;
+	cout<<"Enter the number of rows and columns:";
+	cin>>m;
+	cout<<"\nEnter the values of tri-diagonal matrix :";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+				if(i-j>1 || i-j<-1)
+			{
+				td[i][j]=0;
+			}
+			else
+			{
+				cin>>td[i][j];
+			}
+		}
+	}
+	cout<<"the tri diagonal matrix is :\n\n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			cout<<td[i][j];
+			cout<<"\t";	
+		}
+		cout<<"\n";
+	}
+	cout<<"\nmapping to 1d array \n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			if(i-j>1 || i-j<-1)
+			{
+				;
+			}
+			else
+			{
+				td1d[k]=td[i][j];
+				k++;
+			}
+		}
+	}
+	for(i=0;i<k;i++)
+	{
+		cout<<td1d[i];
+		cout<<"  ";
+	}
+	cout<<"\nenter the position for retreival\n\n";
+	cin>>i;
+	cin>>j;
+	cout<<td1d[2*i+j];
+}
+
+
+program e
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	cout << "Enter the order of the matrix : ";
+	int n;
+	cin >> n;
+	int size = n;
+	cout << "Enter the elements of the matrix : " << endl;
+	int arr[n][n];
+	for (int i=0; i<n; i++)
+	{
+		for (int j=0; j<n; j++)
+				cin >> arr[i][j];
+		cout << endl;
+	}
+	cout << "Square Matrix is : " << endl;
+	for (int i=0; i<n; i++)
+	{
+		for (int j=0; j<n; j++)
+			cout << arr[i][j] <<"\t";
+		cout << endl;
+	}
+	int b[size]={};
+	int k=0;
+	// mapping begins
+	for (int i=0; i<n; i++)
+	{
+		for (int j=0; j<n; j++)
+				b[k++]=arr[i][j];
+	}
+	cout << endl << "Mapped 1-D Array is : "<< endl;
+	for (int i=0; i<k; i++)
+		cout << b[i] << "\t";
+	cout << endl;
+	int a1, a2;
+	cout << "Enter the row and column to search for : ";
+	cin >> a1 >> a2;
+	cout << b[a1*n+a2] << endl;
+	return 0;
+}
+
+
+program f
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	cout << "Enter the order of the matrix : ";
+	int n;
+	cin >> n;
+	int size = n;
+	cout << "Enter the elements of the matrix : " << endl;
+	int arr[n][n];
+	for (int i=0; i<n; i++)
+	{
+		for (int j=0; j<n; j++)
+				cin >> arr[i][j];
+		cout << endl;
+	}
+	cout << "Square Matrix is : " << endl;
+	for (int i=0; i<n; i++)
+	{
+		for (int j=0; j<n; j++)
+			cout << arr[j][i] <<"\t";
+		cout << endl;
+	}
+	int b[size]={};
+	int k=0;
+	// mapping begins
+	for (int i=0; i<n; i++)
+	{
+		for (int j=0; j<n; j++)
+				b[k++]=arr[i][j];
+	}
+	cout << endl << "Mapped 1-D Array is : "<< endl;
+	for (int i=0; i<k; i++)
+		cout << b[i] << "\t";
+	cout << endl;
+	int a1, a2;
+	cout << "Enter the row and column to search for : ";
+	cin >> a1 >> a2;
+	cout << b[a2*n+a1] << endl;
+	return 0;
+}

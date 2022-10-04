@@ -1,0 +1,109 @@
+Program 3 
+
+import java.util.Scanner;  
+
+public class Swaping {  
+
+public static void main(String[] args) {  
+
+Scanner sc = new Scanner(System.in); 
+
+System.out.println("enter the string");  
+
+String str=sc.nextLine(); 
+
+System.out.println("enter the integer");  
+
+int num = sc.nextInt(); 
+
+System.out.println("before swap :"+str+","+num); 
+
+int temp = num; 
+
+num = Integer.parseInt(str); 
+
+str = String.valueOf(temp); 
+
+System.out.println("after swap"+str+","+num);  
+
+}  
+
+}  
+
+ 
+Program 2 
+
+ 
+import java.util.Scanner; 
+
+public class  Program2 { 
+
+public static void main(String args[]) { 
+
+Scanner sc = new Scanner(System.in ); 
+
+int num1,num2,sum;  
+
+System.out.println("Enter firstnumber:");  
+
+Scanner sc1 = new Scanner(System.in ); 
+num1 =sc1.nextInt();  
+
+System.out.println("Enter second number:");  
+
+Scanner sc2 = new Scanner(System.in); 
+
+num2 =sc.nextInt();  
+
+sum = num1 + num2;  
+
+System.out.println("sum of these numbers " +sum); 
+
+if (sum % 2==0) { 
+
+System.out.println("the sum is even"); 
+
+} 
+
+else { 
+
+System.out.println("the sum is odd "); 
+
+} 
+
+} 
+
+} 
+
+
+Programe-1 
+ 
+
+import java.util.Scanner; 
+public class Conversion { 
+ 
+   public static void main(String[] args) { 
+        int i ; 
+        double d ; 
+        char ch ; 
+        Scanner sc = new Scanner(System.in); 
+        System.out.println("enter an integer"); 
+        i=sc.nextInt(); 
+        System.out.println("enter a decimal number "); 
+        d =sc.nextDouble(); 
+        System.out.println("enter a character "); 
+        ch = sc.next().charAt(0); 
+        byte intbyte=(byte)i; 
+        int charint=(int)ch; 
+        byte doublebyte = (byte)d; 
+        int doubleint = (int)d; 
+        System.out.println("integer to byte:"+i+"to"+intbyte); 
+        System.out.println("character to integer:"+ch+"to"+charint); 
+        System.out.println("double to byte:"+d+"to"+doubleint); 
+        System.out.println("double to int:"+d+"to"+doubleint); 
+
+   } 
+
+} 
+
+ 
