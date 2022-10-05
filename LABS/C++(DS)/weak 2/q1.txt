@@ -1,4 +1,5 @@
-prog1 a
+// UPPER TRIANGULAR MATRIX
+
 #include<iostream>
 using namespace std;
 int main()
@@ -54,7 +55,9 @@ int main()
 	cout<<u1d[(m*i)+j-(i*(i+1)/2)];
 }
 ----------------------------------------------------------------
-prog1 b
+ 
+// LOWER TRIANGULAR MATRIX 
+
 #include<iostream>
 using namespace std;
 int main()
@@ -112,7 +115,9 @@ int main()
 }
 	
 -----------------------------------------------------------------------
-prog1 c
+ 
+// DIAGONAL MATRIX
+
 #include<iostream>
 using namespace std;
 int main()
@@ -169,7 +174,9 @@ int main()
 	
 }
 -------------------------------------------------------------------------------
-prog1 d
+
+// TRI DIAGONAL MATRIX
+
 #include<iostream>
 using namespace std;
 int main()
@@ -228,9 +235,9 @@ int main()
 	cin>>j;
 	cout<<td1d[2*i+j];
 }
+------------------------------------
 
-
-program e
+// ROW MAJOR 
 
 #include <iostream>
 
@@ -275,9 +282,9 @@ int main()
 	cout << b[a1*n+a2] << endl;
 	return 0;
 }
+-----------------------------------------------
 
-
-program f
+// COLUMN MAJOR
 
 #include<iostream>
 
